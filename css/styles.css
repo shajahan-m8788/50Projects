@@ -12,38 +12,58 @@ body {
   font-family: "Poppins", sans-serif; }
 
 .container {
-  display: flex;
-  gap: 1rem;
-  height: 100vh;
-  align-items: center;
-  padding: 2rem; }
-
-.item {
-  height: 30rem;
-  position: relative;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  flex: 0.5;
-  transition: all 0.8s;
-  cursor: pointer; }
-  .item h2 {
-    color: white;
-    position: absolute;
-    left: 1rem;
-    font-size: 3.5rem;
-    font-weight: 500;
-    font-size: 1.8rem;
-    top: 8rem;
-    transform: rotate(90deg);
-    transition: all 0.8s;
-    opacity: 0.7; }
-
-.item.active {
-  flex: 3; }
-  .item.active h2 {
-    transform: rotate(0deg);
-    opacity: 1;
-    font-size: 3.5rem;
-    top: unset;
-    bottom: 2rem; }
+  max-width: 100%;
+  width: 40rem;
+  margin: 10rem auto;
+  height: 100vh; }
+  .container .progress-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative; }
+    .container .progress-container::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 4px;
+      background-color: #dadce3;
+      width: 100%;
+      z-index: -1; }
+    .container .progress-container .progress {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 4px;
+      background-color: #3a65f2;
+      width: 0%;
+      z-index: -1;
+      transition: all 0.3s; }
+    .container .progress-container .circle {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 20rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      border: 1px solid #dadce3;
+      font-size: 1.5rem;
+      color: #dadce3; }
+      .container .progress-container .circle.active {
+        background-color: #3a65f2;
+        color: #fff; }
+  .container .btn-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    gap: 1rem; }
+    .container .btn-wrap .btn {
+      padding: 1rem 2rem;
+      background-color: #3a65f2;
+      color: #fff;
+      outline: none;
+      border: none;
+      cursor: pointer; }
+      .container .btn-wrap .btn:disabled {
+        background-color: #dadce3;
+        cursor: not-allowed; }

@@ -138,3 +138,36 @@ body {
   transition: transform 0.5s linear; }
   .project-3-container.show-nav .circle {
     transform: rotate(-70deg); }
+
+.search {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(90deg, #7d5fff, #7c2ffa); }
+  .search__container {
+    position: relative; }
+    .search__container input,
+    .search__container button {
+      width: 5rem;
+      height: 5rem;
+      background-color: #fff;
+      border: 0;
+      padding: 0 1.5rem;
+      font-size: 1.8rem; }
+    .search__container input {
+      transition: width 0.3s; }
+    .search__container button {
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: transform 0.3s;
+      cursor: pointer; }
+    .search__container.active input {
+      width: 20rem; }
+    .search__container.active button {
+      transform: translateX(19.8rem); }
+    .search__container input:focus,
+    .search__container button:active {
+      outline: none;
+      border: none; }

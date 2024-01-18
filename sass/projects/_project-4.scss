@@ -1,0 +1,40 @@
+.search {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(90deg, #7d5fff, #7c2ffa);
+  &__container {
+    position: relative;
+    input,
+    button {
+      width: 5rem;
+      height: 5rem;
+      background-color: #fff;
+      border: 0;
+      padding: 0 1.5rem;
+      font-size: 1.8rem;
+    }
+    input {
+      transition: width 0.3s;
+    }
+    button {
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+    &.active input {
+      width: 20rem;
+    }
+    &.active button {
+      transform: translateX(19.8rem);
+    }
+    input:focus,
+    button:active {
+      outline: none;
+      border: none;
+    }
+  }
+}

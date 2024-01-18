@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 * {
   box-sizing: inherit;
   margin: 0;
@@ -67,3 +68,73 @@ body {
       .container .btn-wrap .btn:disabled {
         background-color: #dadce3;
         cursor: not-allowed; }
+
+.project-3-container {
+  font-family: "Lato", sans-serif;
+  background-color: #fafafa;
+  transition: transform 0.5s linear;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 5rem;
+  transform: rotate(0deg); }
+  .project-3-container .content {
+    max-width: 100rem;
+    margin: 5rem auto; }
+    .project-3-container .content h2 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem; }
+    .project-3-container .content small {
+      font-size: 2rem;
+      font-style: italic; }
+    .project-3-container .content p {
+      margin-top: 2rem;
+      line-height: 1.5;
+      font-size: 1.8rem; }
+    .project-3-container .content img {
+      max-width: 100%; }
+    .project-3-container .content h3 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      margin-top: 3rem; }
+  .project-3-container .circle-container {
+    position: fixed;
+    left: -10rem;
+    top: -10rem;
+    z-index: 999; }
+    .project-3-container .circle-container .circle {
+      width: 20rem;
+      height: 20rem;
+      background-color: deepskyblue;
+      border-radius: 50%;
+      position: relative;
+      transition: transform 0.5s linear; }
+      .project-3-container .circle-container .circle button {
+        border: none;
+        height: 100px;
+        position: absolute;
+        background-color: transparent;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        cursor: pointer; }
+        .project-3-container .circle-container .circle button i {
+          font-size: 3rem;
+          color: #fff; }
+      .project-3-container .circle-container .circle #open {
+        left: 60%; }
+      .project-3-container .circle-container .circle #close {
+        top: 60%;
+        transform: rotate(90deg);
+        transform-origin: top left; }
+
+body {
+  background-color: #ccc;
+  color: #222;
+  overflow-x: hidden; }
+
+.project-3-container.show-nav {
+  transform: rotate(-20deg);
+  transform-origin: top left;
+  transition: transform 0.5s linear; }
+  .project-3-container.show-nav .circle {
+    transform: rotate(-70deg); }
